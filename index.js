@@ -52,4 +52,10 @@ function getRatingColor(vote){
         return 'red'
     }
 }
-
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const searchItem = search.value;
+    if(searchItem){
+        getMovies(searchURL+ "&query="+ searchItem)
+    }
+})
